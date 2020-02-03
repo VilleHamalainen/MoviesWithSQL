@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/DataClasses1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="faa4e6ec-1607-4c5d-b421-fd6fed0ebdd7" absoluteBounds="3.25, 2.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataClasses1DataContext/elokuvat" />
+      <nestedChildShapes>
+        <elementListCompartment Id="231855dd-4112-481b-9fc0-2b3cc14160f4" absoluteBounds="3.2649999999999997, 3.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="76b6bf2b-8a41-467a-995f-374448dce0f0" absoluteBounds="7.25, 2.75, 2, 1.1939925130208331">
+      <DataClassMoniker Name="/DataClasses1DataContext/Julkaisijat" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79bce5be-39ad-4db1-8aee-03c9077448f8" absoluteBounds="7.265, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.25 : 3.34699625651042); (5.25 : 3.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/Julkaisijat/Julkaisijat_elokuvat" />
+      <nodes>
+        <classShapeMoniker Id="76b6bf2b-8a41-467a-995f-374448dce0f0" />
+        <classShapeMoniker Id="faa4e6ec-1607-4c5d-b421-fd6fed0ebdd7" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

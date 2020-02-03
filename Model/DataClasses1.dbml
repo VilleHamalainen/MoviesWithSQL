@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Movies" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-V7CERF7\SQLEXPRESS;Initial Catalog=Movies;Integrated Security=True" SettingsObjectName="MoviesWithSQL.Properties.Settings" SettingsPropertyName="MoviesConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.elokuvat" Member="elokuvats">
+    <Type Name="elokuvat">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nimi" Type="System.String" DbType="NVarChar(116)" CanBeNull="true" />
+      <Column Name="Julkaisuvuosi" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Kesto" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Arvio" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Julkaisija" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="JulkaisijaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Julkaisijat_elokuvat" Member="Julkaisijat" ThisKey="JulkaisijaID" OtherKey="Id" Type="Julkaisijat" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Julkaisijat" Member="Julkaisijats">
+    <Type Name="Julkaisijat">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Julkaisija" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Julkaisijat_elokuvat" Member="elokuvats" ThisKey="Id" OtherKey="JulkaisijaID" Type="elokuvat" />
+    </Type>
+  </Table>
+</Database>
